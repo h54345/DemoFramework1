@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="internetexplorer"/>
+  <test name="ChromeTest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="pageTests.LoginPageTests">
+        <methods>
+          <include name="loginWithValidCredentials"/>
+          <include name="loginWithInalidCredentials"/>
+          <include name="testClosure"/>
+          <include name="testClosure"/>
+          <include name="testIniatialize"/>
+          <include name="testIniatialize"/>
+        </methods>
+      </class> <!-- pageTests.LoginPageTests -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test name="IETest(failed)" parallel="tests">
+    <parameter name="browser" value="internetexplorer"/>
+    <classes>
+      <class name="pageTests.LoginPageTests">
+        <methods>
+          <include name="loginWithValidCredentials"/>
+          <include name="loginWithInalidCredentials"/>
+          <include name="testClosure"/>
+          <include name="testClosure"/>
+          <include name="testIniatialize"/>
+          <include name="testIniatialize"/>
+        </methods>
+      </class> <!-- pageTests.LoginPageTests -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
