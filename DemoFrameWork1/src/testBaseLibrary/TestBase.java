@@ -13,6 +13,8 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.Parameters;
 
+import genericActionsLibrary.WaitStatement;
+
 public class TestBase {
 
 	public static final Logger log = Logger.getLogger(TestBase.class.getName());
@@ -50,7 +52,8 @@ public class TestBase {
 		}
 		 
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		/*driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);*/
+		WaitStatement.implicitWait(driver, 60);
 	}
 	
 	public void getURL(String url)
